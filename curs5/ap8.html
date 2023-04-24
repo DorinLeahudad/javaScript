@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Vehicol{
+            constructor(model,culoare,mark,age){
+            this._model =model
+            this._culoare=culoare
+            this._mark =mark
+            this._age = age
+            
+        }
+        get type(){
+            console.log("sunt in geter")
+            return this._type;
+        }
+        set type(value){
+            console.log("sunt in seter")
+            this._type=value;
+        }
+        info(){
+            return`${this._model}-are ${this._culoare}- de ${this._mark}- si ${this._age}`;
+        }
+        start(){
+            console.log("vechicolul sa pornit");
+        }
+        stop(){
+            console.log("vechicol sa oprit")
+        }
+    
+    }
+    const vehicle1 = new Vehicol("car","red","Ford",2015);
+    const vehicle2 = new Vehicol("moto","blue","Honda",2018);
+    vehicle1.type;
+    vehicle1.type="bike"
+    console.log(vehicle1.info());
+    console.log(vehicle2.info());
+    console.log(vehicle1.start());
+    </script>
+</body>
+</html>

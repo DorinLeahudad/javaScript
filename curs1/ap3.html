@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function produsNou(nume,pret,stoc,data){
+        
+        this.nume = nume;
+        this.pret = pret;
+        this.stoc = stoc;
+        this.data = data;
+        this.afiseaza =function(){
+          console.log(`Produsul${this.nume} costa ${this.pret}`)
+        }
+        this.cumpara=function(){
+          if(this.stoc>0){
+              this.stoc -=1;
+              console.log(`prosdusul ${this.name} a fost adaugat in cos`)
+          }
+        }
+        this.afiseaza2 =function(){
+          console.log(`Produsul${this.nume} costa ${this.data}`)
+        }
+    }
+    const paine =new produsNou('Paine', 8 ,36,`2002-20-22`)
+    paine.cumpara();
+    paine.afiseaza();
+    paine.afiseaza2();
+    
+    
+    //sugar
+
+    class Produs{
+        constructor(nume,pret,stoc,data){
+        this.nume = nume;
+        this.pret = pret;
+        this.stoc = stoc;
+        this.data = data;
+        }
+        afiseaza(){
+            console.log(`Produsul${this.nume} costa ${this.pret}`)
+        }
+        cumpara(){
+            if(this.stoc>0){
+              this.stoc -=1;
+              console.log(`prosdusul ${this.nume} a fost adaugat in cos`)
+          }
+        }
+    }
+    const apa = new Produs("apa",2.5,45,`20022-02-23`);
+    console.log(apa);
+    apa.cumpara();
+    apa.afiseaza();
+    </script>
+</body>
+</html>

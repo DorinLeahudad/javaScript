@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const masina ={
+          nume:'Dacia ',
+          culoare:'Alb',
+          motor:[1.2, 1.4],
+          nrUsi: 4,
+          an:{versiunea1:1990, versiunea2:2000 },
+          viteza :'180',
+          stop:function(){
+            masina.viteza=0
+            console.log(`Masina sa oprit ! viteza este ${this.viteza}`)
+          }
+        }
+        console.log(masina);
+        console.log(masina.nume);
+        console.log(masina.culoare);
+        console.log(masina.an.versiunea2);
+        console.log(masina.motor[0]);
+        masina.stop();
+        
+    </script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document fix grid</title>
+    <style>
+    .row {
+        width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+ 
+.row::after {
+content: "";
+display: block;
+clear: left;
+}
+ 
+.column {
+float: left;
+width: 16.66%;
+box-sizing: border-box;
+padding: 8px;
+
+}
+ 
+.box {
+height: 144px;
+background-color: #914E67;
+text-overflow: clip;
+}
+    </style>
+</head>
+<body>
+    <div id="row">
+        <div class="column">
+        <div class="box"></div>
+        </div>
+        <div class="column">
+        <div class="box"></div>
+        </div>
+        <div class="column">
+        <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores maxime dolor aspernatur quaerat libero, at fuga nam veniam, modi quidem, ea dignissimos amet ullam necessitatibus. Laboriosam et eveniet excepturi adipisci.</div>
+        </div>
+        <div class="column">
+        <div class="box"></div>
+        </div>
+        <div class="column">
+        <div class="box"></div>
+        </div>
+        <div class="column">
+        <div class="box"></div>
+        </div>
+        </div>
+</body>
+</html>

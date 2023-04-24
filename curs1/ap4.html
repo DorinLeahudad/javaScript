@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Creion{
+            radiera = false;
+            areVarf =true ;
+            constructor(nume,pret,culoare,radiera,lungime,material,stoc){
+                this.nume =nume ;
+                this.pret = pret;
+                this.culoare = culoare;
+                this. radiera = radiera;
+                this.lungime = lungime;
+                this.material = material;
+                if(stoc>=0){
+                    this.stoc = stoc ;
+                }
+                else{
+                    throw 'Nu mai este in stoc!';
+                }
+            }
+            scrie(){
+                if(this.areVarf== true){
+                    this.lungime--
+                    console.log(`Scriu cu ${this.nume}`);
+                }
+                else{
+                    console.log(`Va rog sa ascutiti creionul ${this.nume}`);
+                }
+            }
+            sterge(){
+                if(this.radiera == true){
+                    this.radiera--
+                    console.log(`Creionul ${this.nume} poate strege`);
+                }
+                else{
+                    console.log(`nu sterge ${this.nume}`);
+                }
+            }
+        }
+        const big= new Creion('Big',10,'rosu',true,20,'lemn',100);
+        big.areVarf=false; 
+        
+        console.log(big);
+        big.scrie();
+        big.sterge();
+        
+        const pilot= new Creion('Pilot',23,'galben',true,15,'plastic',200)  
+        pilot.areVarf=true;
+        console.log(pilot);
+        pilot.scrie();
+        
+    </script>
+</body>
+</html>
