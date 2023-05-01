@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - Crearea galeriei responsive</title>
+    <style>
+        .box-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 130px);
+            grid-template-rows: 120px 120px;
+            row-gap: 50px;
+            column-gap: 40px;
+            justify-content: center;
+            
+            
+
+        }
+
+        .element-grid {
+            background-color: rgb(110, 158, 255);
+            border-radius: 8px;
+            height: 100px;
+        }
+
+        .element-grid img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        
+
+        .tile-text {
+            text-align: center;
+            background-color: white;
+            border-radius: 0px 0px 8px 8px;
+            box-shadow: 4px 4px 8px gainsboro;
+            padding: 1px;
+            width: 100%;
+            
+        }
+
+        h1 {
+            grid-column: 1 / -1;
+            margin-top: 70px;
+            font-size: 2rem;
+            
+        }
+
+        p {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+            font-size: 2rem;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1920px) {
+            .box-grid {
+                grid-template-columns: repeat(5, 130px);
+                grid-template-rows: 120px 120px;
+                row-gap: 50px;
+                column-gap: 40px;
+            }
+
+            
+            h1 {
+                font-size: 2rem;
+                margin-top: 70px;
+            }
+
+            p {
+                font-size: 2rem;
+                margin-top: 10px;
+            }
+
+        }
+        @media screen and (max-width: 768px) {
+            .box-grid {
+                grid-template-columns: repeat(3, 130px);
+                grid-template-rows: 120px 120px 120px 120px;
+                row-gap: 30px;
+                column-gap: 20px;
+            }
+
+            
+            h1 {
+                font-size: 1.5rem;
+                margin-top: 70px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                margin-top: 10px;
+            }
+
+        }
+
+        @media screen and (max-width: 414px) {
+            .box-grid {
+                grid-template-columns: repeat(1, 130px);
+                grid-template-rows: repeat(10, 120px);
+                row-gap: 20px;
+                column-gap: 10px;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+                margin-top: 50px;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box-grid">
+        <h1>Gallery Heading</h1>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+        <div class="element-grid">
+            <img src="placeholder-image.png" alt="">
+            <div class="tile-text">Image Title</div>
+        </div>
+
+
+
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam saepe repellendus modi nulla
+            nostrum consequuntur quis voluptatum suscipit fugit ut magnam error, officia ratione esse voluptatibus,
+            neque perferendis tempora?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eveniet, iure velit debitis amet maxime
+            eligendi consequatur placeat consequuntur nostrum perspiciatis distinctio. Facilis illum officia, quas dicta
+            ratione unde perspiciatis!
+        </p>
+
+    </div>
+
+</body>
+
+</html>
